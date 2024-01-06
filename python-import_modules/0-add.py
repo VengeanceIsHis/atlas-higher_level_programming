@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from 0-add.py import add
+from 0-add import add
 def main():
     a = 1
     b = 2
