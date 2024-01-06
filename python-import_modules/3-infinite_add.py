@@ -5,7 +5,8 @@ import sys
 def main():
     result = 0;
     for arg in sys.argv:
-        result += arg
+
+        result += int(arg)
     print(f"{result}")
 
     
