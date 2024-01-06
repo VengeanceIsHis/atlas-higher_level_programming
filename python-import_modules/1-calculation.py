@@ -5,8 +5,8 @@ def main():
     b = 5
     addres = add(a, b) 
     subres = sub(a, b)
-    mulres = sub(a, b)
-    divres = sub(a, b)
+    mulres = mul(a, b)
+    divres = div(a, b)
     print("{} + {} = {}".format(a, b, addres))
     print("{} - {} = {}".format(a, b, subres))
     print("{} * {} = {}".format(a, b, mulres))
