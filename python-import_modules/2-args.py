@@ -8,14 +8,10 @@ def main():
         print("0 arguments.")
     elif count < 2:
         print("1 argument:")
-        print("1: {}".format(arg))
+        print("1: {}".format(sys.argv[1]))
     else:
         print("{} arguments:".format(count))
-        count2 = -1
-        for arg in sys.argv:
-            count2 += 1
-            i = 1
-            if count2 > 0:
+        for i, arg in enumerate(sys.argv[1:], start=1):
                 print("{}: {}".format(i, arg))
 if __name__ == "__main__":
     main()
