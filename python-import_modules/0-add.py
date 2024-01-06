@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-from add_0.py import add
+import 0-add.py
 def main():
     a = 1
     b = 2
-    print("{} + {} = {}".format(a, b, add(a, b))
+    print("{} + {} = {}".format(a, b, 0-add.py.add(a, b))
 if __name__ == "__main__":
-    main()
+          main()
