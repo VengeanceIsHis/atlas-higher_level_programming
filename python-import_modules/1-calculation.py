@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 from calculator_1 import add, sub, mul, div
+
+
 def main():
     a = 10
     b = 5
-    addres = add(a, b) 
+    addres = add(a, b)
     subres = sub(a, b)
     mulres = mul(a, b)
     divres = div(a, b)
