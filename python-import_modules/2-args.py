@@ -11,11 +11,11 @@ def main():
         print("1: {}".format(arg))
     else:
         print("{} arguments:".format(count))
-        2count = -1
+        count2 = -1
         for arg in sys.argv:
-            2count += 1
+            count2 += 1
             i = 1
-            if 2count > 0:
+            if count2 > 0:
                 print("{}: {}".format(i, arg))
 if __name__ == "__main__":
     main()
