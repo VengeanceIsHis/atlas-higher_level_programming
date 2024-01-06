@@ -2,4 +2,4 @@
 for i in range(0, 100):
     print("{}".format(i))
     if i < 99:
-        `print(",")
+        `print(',')
