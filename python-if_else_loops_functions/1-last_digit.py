@@ -17,4 +17,4 @@ elif number < 0 and -abs(last_digit) == 0:
     print(f"{number} is {last_digit} and is 0")
 else:
     last_digit = -abs(last_digit)
-    print(f"{number} is {last_digit} and is less than 6 and not 0") 
+    print(f"{number} is {last_digit} and is less than 6 and not 0")
