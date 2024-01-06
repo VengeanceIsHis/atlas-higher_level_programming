@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-import calculator_1 as cal
+from calculator import add, sub, mul, div
 def main()
     a = 10
     b = 5
-    addres = cal.add(a, b) 
-    subres = cal.sub(a, b)
-    mulres = cal.sub(a, b)
-    divres = cal.sub(a, b)
+    addres = add(a, b) 
+    subres = sub(a, b)
+    mulres = sub(a, b)
+    divres = sub(a, b)
     print("{} + {} = {}".format(a, b, addres))
     print("{} - {} = {}".format(a, b, subres))
     print("{} * {} = {}".format(a, b, mulres))
