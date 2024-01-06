@@ -4,9 +4,8 @@ import sys
 
 def main():
     result = 0;
-    for arg in sys.argv:
-
-        result += int(arg)
+    for i, arg in enumerate(sys.argv[1:], start=1):
+        result += int(sys.argv[i])
     print(f"{result}")
 
     
