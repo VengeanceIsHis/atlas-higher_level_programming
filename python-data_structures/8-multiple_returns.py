@@ -7,6 +7,6 @@ def multiple_returns(sentence):
                 length = i + 1
         return length, firstchar
     else:
-    return 0, None
+        return 0, None
 if __name__ == "__main__":
     main()
