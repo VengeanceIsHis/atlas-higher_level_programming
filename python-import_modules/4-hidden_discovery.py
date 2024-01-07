@@ -4,7 +4,7 @@ def main():
     mo_names = dir(hidden)
     for name in mo_names:
         for i in name:
-            if name ='_'
+            if name =='_'
                 break
             else:
                 print(name)
