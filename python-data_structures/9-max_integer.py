@@ -8,5 +8,6 @@ def max_integer(my_list=[]):
             j = i
     return j
 
+
 if __name__ == "__main__":
     main()
