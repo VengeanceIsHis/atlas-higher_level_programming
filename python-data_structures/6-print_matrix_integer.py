@@ -7,5 +7,6 @@ def print_matrix_integer(matrix=[[]]):
                 print(' ', end='')
         print()
 
+
 if __name__ == "__main__":
     main()
