@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 def print_reversed_list_integer(my_list=[]):
-    count = 0
-    for i in reversed(range(len(my_list))):
-        count += 1
-    if count < 1:
-        return None
+    if not my_list:
+        print("")
+        return
     for i in reversed(range(len(my_list))):
         print("{:d}".format(my_list[i]))
