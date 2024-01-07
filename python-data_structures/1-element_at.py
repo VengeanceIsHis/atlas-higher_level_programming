@@ -4,6 +4,6 @@ def element_at(my_list, idx):
         return None
     for i in my_list:
         if idx > i:
-        return None
+            return None
     for i in my_list[:idx]:
         print("{:d}".format(i))
