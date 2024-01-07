@@ -1,6 +1,6 @@
 #!/usr/bin/python3                                                              
 def add_tuple(tuple_a=(), tuple_b=()):
-    result_tuple = tuple_a[0] + tuple_b[0], tuple_a[1] + tuple_b[1]
+    result_tuple = tuple(x + y for x, y in zip(tuple_ a, tuple_b))
     return result_tuple
 if __name__ == "__main__":
     main()
