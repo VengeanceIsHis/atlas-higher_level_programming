@@ -7,5 +7,6 @@ def element_at(my_list, idx):
         count += 1
     if idx > count:
         return None
-    for i in my_list[:idx]:
-        print("{}".format(i))
+    else:
+        for i in my_list[:idx]:
+            print("{}".format(i))
