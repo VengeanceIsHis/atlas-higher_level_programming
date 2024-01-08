@@ -3,6 +3,8 @@ def roman_to_int(roman_string):
     result = 0
     prev_value = 0
     current_value = 0
+    if not roman_string:
+        return None
     for char in roman_string:
         if char == 'I':
             current_value += 1
