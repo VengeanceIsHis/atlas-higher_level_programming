@@ -1,21 +1,28 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
     result = 0
+    prev_value = 0
+    current_value = 0
     for char in roman_string:
         if char == 'I':
-            result += 1
+            current_value += 1
         elif char == 'V':
-            result += 5
+            current_value += 5
         elif char == 'X':
-            result += 10
+            current_value += 10
         elif char == 'L':
-            result += 50
+            current_value += 50
         elif char == 'C':
-            result += 100
+            current_value += 100
         elif char == 'D':
-            result += 500
+            current_value += 500
         elif char == 'M':
-            result += 1000
+            current_value += 1000
         else:
             continue
-    return result
+        if current_value > prev_value:
+            result += current_value - 2 * prev_value
+        else:
+            result += current_value
+            prev_value = current_value
+        return result
