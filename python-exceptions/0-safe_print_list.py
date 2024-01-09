@@ -1,4 +1,11 @@
 #!/usr/bin/python3
-def safe_print_integer(value):
-    integer_value = int(value)
-    print("{:d}".format(integer_value))
+def safe_print_list(my_list=[], x = 0):
+    try:
+        for index in my_list:
+        print("{}".format(index))
+        if index == x:
+            break:
+    return index
+    except:
+        return None
+        
