@@ -26,7 +26,6 @@ class Square:
         """Gathers the area of square"""
         return (self.__size * self.__size)
     def my_print(self):
-        for row in area:
+        for row in size:
             for i in row:
                 print("#")
-                
