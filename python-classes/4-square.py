@@ -11,7 +11,7 @@ class Square:
     def size(self):
         """gets current size of the square"""
         return self.__size
-    @size_setter
+    @size.setter
     def size(self, value):
         """Redefines the size of a square"""
         if not isinstance(value, int):
