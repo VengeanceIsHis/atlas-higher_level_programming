@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Start of the function"""
+
+
 def add_integer(a, b=98):
     """Defines an integer addition function"""
     if ((not isinstance(a, int) and not isinstance(a, float))):
