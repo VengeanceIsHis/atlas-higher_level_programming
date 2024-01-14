@@ -1,14 +1,9 @@
 #!/usr/bin/python3
+"""Start of the function"""
 def add_integer(a, b=98):
-    if isinstance(a, float):
-       int_a = int(a)
-    if isinstance(b, float):
-        int_b = int(b)
-    else:
-        int_a = a
-        int_b = b
-    if not isinstance(int_a, int):
+    """Defines an integer addition function"""
+    if ((not isinstance(a, int) and not isinstance(a, float))):
         raise TypeError("a must be an integer")
-    if not isinstance(int_b, int):
+    if ((not isinstance(b, int) and not isinstance(b, float))):
         raise TypeError("b must be an integer")
-    return int_a + int_b
+    return (int(a) + int(b))
