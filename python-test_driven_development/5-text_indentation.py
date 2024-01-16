@@ -9,11 +9,11 @@ def text_indentation(text):
     else:
         count = 0
         for char in text:
-            while count < len(text)
-            if char == '.' or char == '?' or char ==':':
-                print(f"{text}", end="")
-                print("\n")
-                count += 1
-            if not char == '\0':
-                print(f"{text}", end="")
-                count += 1
+            while count < len(text):
+                if char == '.' or char == '?' or char ==':':
+                    print(f"{text}", end="")
+                    print("\n")
+                    count += 1
+                if not char == '\0':
+                    print(f"{text}", end="")
+                    count += 1
