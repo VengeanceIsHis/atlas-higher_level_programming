@@ -12,5 +12,5 @@ def text_indentation(text):
                 print(char)
                 print("")
                 continue
-            if not char == '\0':
+            elif char != '\n':
                 print(char, end="")
