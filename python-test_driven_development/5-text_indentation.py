@@ -11,5 +11,8 @@ def text_indentation(text):
             if char in ['.', '?', ':']:
                 print(char)
                 print("")
+                skip_space = True
+            elif char ==' ' and skip_space:
+                continue
             elif char != '\n':
                 print(char, end="")
