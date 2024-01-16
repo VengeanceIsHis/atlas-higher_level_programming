@@ -9,7 +9,7 @@ def text_indentation(text):
     else:
         for char in text:
             if char == '.' or char == '?' or char ==':':
-                print(char)
-                print("\n")
+                print(char, end="")
+                print("")
             if not char == '\0':
                 print(char, end="")
