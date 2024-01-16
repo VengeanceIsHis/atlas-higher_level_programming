@@ -12,7 +12,7 @@ class Rectangle:
     def width(self):
         """gets the curent width of rectangle"""
         return self.__width
-    @property.setter
+    @width.setter
     def width(self, value):
         """Redefines the width of rectangle"""
         if not isinstance(value, int):
@@ -23,7 +23,7 @@ class Rectangle:
     def height(self):
         """gathers the height of an rectangle"""
         return self.__heigh
-    @property.setter
+    @height.setter
     def height(self, value):
         """Redeines the height of an rectangle"""
         if not isinstance(value, int):
