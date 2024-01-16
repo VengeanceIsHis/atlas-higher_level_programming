@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+"""New matix module"""
 def matrix_divided(matrix, div):
+    """Matrix function that divides each element"""
     if (not isinstance(matrix, list) or matrix == [] or
             not all(isinstance(row, list) for row in matrix) or
             not all((isinstance(ele, int) or isinstance(ele, float))
