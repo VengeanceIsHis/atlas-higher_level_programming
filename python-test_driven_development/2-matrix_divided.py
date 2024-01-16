@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """New matix module"""
+
+
 def matrix_divided(matrix, div):
     """Matrix function that divides each element"""
     if (not isinstance(matrix, list) or matrix == [] or
