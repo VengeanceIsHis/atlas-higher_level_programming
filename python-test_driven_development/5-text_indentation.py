@@ -13,7 +13,7 @@ def text_indentation(text):
                 print(char)
                 print("")
                 skip_space = True
-            elif char ==' ' and skip_space:
+            elif char == ' ' and skip_space:
                 continue
             elif char != '\n':
                 print(char, end="")
