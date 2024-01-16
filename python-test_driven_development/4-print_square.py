@@ -13,7 +13,7 @@ def print_square(size):
     if size == 0:
         print("")
     else:
-        for row in size:
+        for row in range(size):
             for i in row:
                 print("#", end="")
-            print("")
+            print("", end="")
