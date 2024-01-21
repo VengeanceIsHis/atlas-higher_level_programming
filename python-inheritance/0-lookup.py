@@ -2,6 +2,7 @@
 """Module for new function"""
 def lookup(obj):
     """New functino that returns all atrributes"""
-    for key in obj:
-        list += key
-    return key
+    attributes =[]
+    for key in dir(obj):
+        attributes.append(key)
+    return attributes
