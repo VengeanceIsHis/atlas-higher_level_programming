@@ -2,8 +2,6 @@
 """Module that creats a subclass to list"""
 
 
-Class MyList(list):
-    def __init__(self)
-    my_list = super().__init__()
-    def print_sorted(self):
-        print(my_list)
+def print_sorted(self):
+    """Sorted print of the current instance"""
+    print(sorted(self))
