@@ -1,0 +1,1 @@
+Learning Inheritance and I'm really excited considering I can take this chance to understand Class in Python more. This has been my ted talk.
