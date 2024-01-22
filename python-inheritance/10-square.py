@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""New module for sublass Rectangle from Geometry"""
+"""New module for sublass Rectangle from Geometry."""
 Rectangle = __import__('9-rectangle.py').Rectangle
 
 
