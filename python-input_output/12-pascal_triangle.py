@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """New module for new array of Pascal Triangle"""
+
+
 def pascal_triangle(n):
     """function that returns the pascal Triangle to be printed"""
     if n <= 0:
