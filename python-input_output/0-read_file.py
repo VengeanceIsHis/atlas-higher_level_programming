@@ -3,6 +3,4 @@
 def read_file(filename=""):
     """Function that finds the file and reads it"""
     with open('filename', encoding="utf-8") as f:
-        read_data = f.read()
-    return read_data
-    f.closed
+        print(f.read(), end="")
