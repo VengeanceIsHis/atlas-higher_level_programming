@@ -11,6 +11,6 @@ class Student:
 
     def to_json(self, attrs=None):
         check = False
-        check = isinstance(obj, list) and all(isinstance(item, str) for item in obj)
+        check = isinstance(attrs, list) and all(isinstance(item, str) for item in attrs)
         if not check == False:
             return self.__dict__
