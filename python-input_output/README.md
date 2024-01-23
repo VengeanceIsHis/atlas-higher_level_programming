@@ -1,0 +1,1 @@
+Learning input and output while understanding file opening.
