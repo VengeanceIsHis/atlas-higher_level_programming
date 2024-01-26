@@ -31,4 +31,39 @@ class Rectangle(Base):
     def height(self, value):
         """returns the height"""
         return(self.__height)
+
+    @height.setter
+    def height(self, value):
+        """sets the height"""
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        self.__height = value
+
+    @property
+    def x(self):
+        """returns location x"""
+        return self.__x
     
+    @x.setter
+    def x(self, value):
+        """sets the location x"""
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        self.__height = value
+
+    @property
+    def y(self):
+        """returns the location variable y"""
+        return self.__y
+    
+    @y.setter
+    def y(self, value):
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        self.__y = value
