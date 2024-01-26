@@ -62,6 +62,7 @@ class Rectangle(Base):
     
     @y.setter
     def y(self, value):
+        """Sets the location y"""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
