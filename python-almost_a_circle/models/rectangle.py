@@ -8,16 +8,16 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializing a new rectangle"""
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
     @property
     def width(self):
         """returns the width"""
-        return (self.__width)
+        return self.__width
     
     @width.setter
     def width(self, value):
