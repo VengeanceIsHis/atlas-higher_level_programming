@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Module for rectangle as a subclass to Base"""
-from base.py import Base
 
-class Rectangle(Base):
+
+class Rectangle():
     """initializing new instance of Rectangle"""
 
 
