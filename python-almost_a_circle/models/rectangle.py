@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Module for rectangle as a subclass to Base"""
-Base = __import__('base.py').Base
+Base = __import__('base').Base
 
 class Rectangle(Base):
     """initializing new instance of Rectangle"""
@@ -60,7 +60,7 @@ class Rectangle(Base):
     def y(self):
         """returns the location variable y"""
         return self.__y
-    
+
     @y.setter
     def y(self, value):
         """Sets the location y"""
