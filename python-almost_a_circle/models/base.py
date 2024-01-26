@@ -4,11 +4,11 @@
 
 class Base:
     """New class that creats the foundation for the Project"""
-    __Base__nb_objects = 0
+    __nb_objects = 0
     def __init__(self, id=None):
         """initializing new instance with id"""
-        if not id == None:
+        if id is not None:
             self.id = id
         else:
-            __Base__nb_objects += 1
-            self.id = __Base__nb_objects
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
