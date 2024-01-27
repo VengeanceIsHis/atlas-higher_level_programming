@@ -72,7 +72,7 @@ class Rectangle(Base):
 
     def display(self):
         """New display function that prints out the shape"""
-        for row in self.width:
-            for col in self.height:
+        for row in range(0, self.width):
+            for col in range(0, self.height):
                 print('#', end="")
             print()
