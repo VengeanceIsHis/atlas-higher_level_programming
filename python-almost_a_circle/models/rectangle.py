@@ -97,11 +97,11 @@ class Rectangle(Base):
                         self.id = arg
                 elif a == 1:
                     self.width = arg
-                elif a = 2:
+                elif a == 2:
                     self.height = arg
-                elif a = 3:
+                elif a == 3:
                     self.x = arg
-                elif a = 4:
+                elif a == 4:
                     self.y = arg
                 a += 1
         elif kwargs and len(kwargs) != 0:
