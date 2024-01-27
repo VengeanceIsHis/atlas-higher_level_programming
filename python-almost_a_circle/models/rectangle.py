@@ -72,12 +72,14 @@ class Rectangle(Base):
 
     def display(self):
         """New display function that prints out the shape"""
+        if self.width == 0 or self.height == 0:
+            print("")
+            return
+        [print("") for y in range(self.y)]
         for row in range(0, self.height):
-            if row >= self.y:
-                for col in range(0, self.width):
-                    if col >= self.x:
-                        print('#', end="")
-                print()
+            [print(" ", end="") for x in range(self.x)]
+            [print("#", end="") for w in range(self.width)]
+            print("")
     def __str__(self):
         """New return of string that identifies all attributes of instance"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
