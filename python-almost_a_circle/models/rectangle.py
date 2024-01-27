@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Module for rectangle as a subclass to Base"""
-Base = __import__('base').Base
+Base = __import__("base").Base
 
 
 
