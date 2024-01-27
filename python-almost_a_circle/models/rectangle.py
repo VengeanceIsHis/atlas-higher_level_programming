@@ -76,3 +76,7 @@ class Rectangle(Base):
             for col in range(0, self.width):
                 print('#', end="")
             print()
+    def __str__(self):
+        """New return of string that identifies all attributes of instance"""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+        self.x, self.y, self.width, self.height)
