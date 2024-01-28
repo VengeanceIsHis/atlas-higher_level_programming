@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Module for Square class derived from Rectangle which is from Base"""
-from models.Rectangle import Base
+from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """New initialization through Square class"""
