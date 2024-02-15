@@ -1,2 +1,2 @@
---Uses sql to list all data in database
-Select * From users;
+--Uses sql to list all data in database.
+SHOW DATABASES;
