@@ -1,2 +1,2 @@
---List Tables in Databases.--
+-- List Tables in Databases. --
 SHOW TABLES IN mysql;
