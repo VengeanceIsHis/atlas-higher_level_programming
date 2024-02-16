@@ -1,9 +1,8 @@
 -- Creates a second table in database.
-CREATE DATABASE IF NOT EXISTS hbtn_test_db_9;
-CREATE TABLE IF NOT EXISTS hbtn_0c_0.second_table (
-    id INT,
-    name VARCHAR(256),
-    score INT,
+CREATE TABLE IF NOT EXISTS `second_table` (
+    `id` INT,
+    `name` VARCHAR(256),
+    `score` INT,
 );
 
 INSERT INTO `second_table` (`id`, `name`, `score`) VALUES
