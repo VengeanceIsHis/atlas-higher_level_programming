@@ -1,4 +1,4 @@
 -- LISTS ALL RECORDS WITH THE SAME SCORE IN A TABLE
-SELECT score, COUNT(*) AS record_count
+SELECT score, COUNT(*) AS number
 FROM second_table
 GROUP BY score;
