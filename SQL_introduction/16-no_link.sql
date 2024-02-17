@@ -1,4 +1,5 @@
 -- LISTS ALL RECORDS IF IT HAS A NAME VALUE
-SELECT score, name IF `name` EXISTS
+SELECT score, nameS
 FROM second_table
+WHERE name IS NOT NULL AND name != ''
 ORDER BY score DESC;
