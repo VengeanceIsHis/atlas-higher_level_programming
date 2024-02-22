@@ -1,5 +1,5 @@
 -- CREATE A NEW TABLE REFERENCING CALI
-SELECT city_name
+SELECT id, name
 FROM cities
-WHERE state_name = 'California'
-ORDER BY cities.id ASC;
+WHERE state_id = (SELECT id FROM states WHERE name = 'California')
+ORDER BY id ASC;
