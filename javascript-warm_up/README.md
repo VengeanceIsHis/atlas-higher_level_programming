@@ -1,1 +1,1 @@
-New README for learning javascripttttt
+New README for learning javascript
