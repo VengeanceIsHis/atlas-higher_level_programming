@@ -9,6 +9,6 @@ function add(a, b) {
   sum += b;
   return (sum);
 }
-int_return = add(param1. param2);
+int_return = add(param1, param2);
 console.log(param1)
 console.log(int_return)
