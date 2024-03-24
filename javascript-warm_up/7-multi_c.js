@@ -7,5 +7,6 @@ if (parseInt(param))
     while (i < x)
     {
         console.log(param);
+        i++;
     }
 }
