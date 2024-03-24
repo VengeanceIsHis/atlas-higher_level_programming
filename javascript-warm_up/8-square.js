@@ -12,6 +12,7 @@ if (parseInt(param)) {
       temp_string += 'X';
       j++;
     }
+    console.log("bug is here");
     string = temp_string;
     console.log(string);
     i++;
