@@ -1,5 +1,3 @@
 #!/usr/bin/nodejs
 const args = process.argv;
-process.stdout.write(args[2]); 
-process.stdout.write("is");
-process.stdout.write(args[3]);
+console.log(args[2] + " is " + args[3]);
