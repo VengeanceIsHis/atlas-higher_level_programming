@@ -14,3 +14,5 @@ if (parseInt(param)) {
         i++;
     }
   }
+else
+    console.log("Missing size");
