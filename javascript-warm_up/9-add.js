@@ -10,4 +10,5 @@ function add(a, b) {
   return (sum);
 }
 int_return = add(param1. param2);
+console.log(param1)
 console.log(int_return)
