@@ -11,4 +11,4 @@ function add (a, b) {
   return (sum);
 }
 intReturn = add(param1, param2);
-console.log(int_return);
+console.log(intReturn);
