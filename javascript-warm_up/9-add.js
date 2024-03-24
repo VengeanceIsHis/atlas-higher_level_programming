@@ -1,7 +1,7 @@
 #!/usr/bin/nodejs
 const args = process.argv;
-const param1 = args[2];
-const param2 = args[3];
+const param1 = parseInt(args[2]);
+const param2 = parseInt(args[3]);
 let int_return = 0;
 function add(a, b) {
   let sum = 0;
