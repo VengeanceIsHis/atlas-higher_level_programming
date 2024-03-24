@@ -3,9 +3,10 @@ const args = process.argv;
 const param = args[2];
 let i = 0; let j = 0;
 let string = '';
+let temp_string = '';
 if (parseInt(param)) {
   while (i < param) {
-    let temp_string = '';
+    temp_string = '';
     while (j < param) {
       temp_string += 'X';
       j++;
