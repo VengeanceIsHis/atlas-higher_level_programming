@@ -4,9 +4,9 @@ const param = args[2];
 let i = 0;
 if (parseInt(param))
 {
-    while (i < x)
+    while (i < param)
     {
-        console.log(param);
+        console.log("C is fun");
         i++;
     }
 }
