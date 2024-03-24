@@ -7,7 +7,7 @@ let temp_string = '';
 if (parseInt(param)) {
   while (i < param) {
     temp_string = '';
-    while (j < param) {
+    while (j < parseInt(param)) {
       temp_string += 'X';
       j++;
     }
