@@ -1,12 +1,8 @@
 #!/usr/bin/nodejs
-const args = process.argv;
-let i = 2;
-let stored = 0;
-while (i < args.length) {
-  const currentNumber = parseInt(args[i])
-    if (currentNumber > stored) {
-      stored = currentNumber
-    }
-    i++;
-    }
-console.log(stored);
+const args = process.argv.slice(2).map(Number);
+const sortedArgs = args.sort((a, b) => b - a);
+if (sortedArgs.length < 2) {
+    console.log("0");
+  } else {
+    console.log(sortedArgs[1]);
+  }
