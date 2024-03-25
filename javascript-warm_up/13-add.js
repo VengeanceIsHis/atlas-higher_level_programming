@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/nodejs
 function add(a, b) {
     let sum = 0;
     sum += a;
