@@ -1,5 +1,5 @@
 #!/usr/bin/node
-if (true)
+if (true) {
 function add(a, b) {
 let sum = 0;
   sum += a;
