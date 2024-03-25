@@ -11,5 +11,6 @@ while (i < args.length) {
     if (args[i] > stored)
         stored = args[i];
     i++;
+    }
 }
 console.log(stored);
