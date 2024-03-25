@@ -5,3 +5,4 @@ function add (a, b) {
   sum += b;
   return sum;
 }
+console.log(add(5, 5));
