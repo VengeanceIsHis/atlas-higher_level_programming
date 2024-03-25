@@ -8,7 +8,8 @@ while (i < args.length) {
       stored = args[i];
       i++;
     }
-  }
-  if (args[i] > stored) { stored = args[i]; }
+    if (args[i] > stored)
+        stored = args[i];
+    i++;
 }
 console.log(stored);
