@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const unused = () => {
+if (true)
 function add(a, b) {
 let sum = 0;
   sum += a;
