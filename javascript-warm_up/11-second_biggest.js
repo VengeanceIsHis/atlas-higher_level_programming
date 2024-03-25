@@ -3,14 +3,10 @@ const args = process.argv;
 let i = 2;
 let stored = 0;
 while (i < args.length) {
-  if (i === 2) {
-    if (parseInt(args[i]) > parseInt(args[i + 1])) {
-      stored = args[i];
-      i++;
+  const currentNumber = parseInt(args[i])
+    if (currentNumber > stored) {
+      stored = currentNumber
     }
-    if (args[i] > stored)
-        stored = args[i];
     i++;
     }
-}
 console.log(stored);
