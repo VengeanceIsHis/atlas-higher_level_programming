@@ -4,7 +4,7 @@ const request = require('request')
 
 const dataurl = process.argv[2];
 
-request.get(url, (error, response) => {
+request.get(dataurl, (error, response) => {
     if (error) {
         console.error('Error:', error);
     }
