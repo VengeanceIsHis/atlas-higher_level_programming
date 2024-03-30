@@ -7,5 +7,4 @@ string = process.argv[3];
 
 fs.appendFile(filepath, string, (err) => {
     if (err) throw err;
-    console.log('Text appended to file');
 });
