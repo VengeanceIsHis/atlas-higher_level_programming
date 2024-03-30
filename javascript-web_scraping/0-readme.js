@@ -1,6 +1,13 @@
 #!/usr/bin/nodejs
 const fs = require('fs');
 
-const reader = FileReader();
-const argument = process.argv;
-const filename = argument[2];
+
+const argument = process.argv[2];
+fs.readFile(filename, 'utf-8', (err, data) => {
+    if (err) {
+        console.error(err);
+    }
+    else {
+        console.log(data)
+    }
+});
