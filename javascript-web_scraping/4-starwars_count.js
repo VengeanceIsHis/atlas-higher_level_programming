@@ -1,53 +1,53 @@
-#!/usr/bin/nodejs
 const request = require('request');
 
+const apiUrl = process.argv[2];
+const characterUrl = "https://swapi-api.hbtn.io/api/people/18/";
+
 let count = 0;
-const argument = process.argv[2];
-let i = 1;
-let movieData;
 
-
-const getMovieData = new Promise((resolve, reject) => {
-  request.get(argument, (error, response, body) => {
+function fetchFilmData(url) {
+  request.get(url, (error, response, body) => {
     if (error) {
-      reject(error);
-    } else {
-      resolve(JSON.parse(body));
+      console.error('Error fetching film data:', error);
+      return;
+    }
+
+    try {
+      const filmData = JSON.parse(body);
+      if (filmData.characters && filmData.characters.includes(characterUrl)) {
+        count++;
+      }
+    } catch (parseError) {
+      console.error('Error parsing film data:', parseError);
     }
   });
-});
-
-
-let individualRequests = [];
-
-
-while (i < 8) {
-  const individual = argument + '/' + i;
-  individualRequests.push(new Promise((resolve, reject) => {
-    request.get(individual, (error, response, body) => {
-      if (error) {
-        reject(error);
-      } else {
-        const indi_movie = JSON.parse(body);
-        if (indi_movie.characters && Array.isArray(indi_movie.characters) && indi_movie.characters.includes("https://swapi-api.hbtn.io/api/people/18/")) {
-          count++;
-        }
-        resolve();
-      }
-    });
-  }));
-  i++;
 }
 
-
-Promise.all([getMovieData, ...individualRequests])
-  .then(() => {
-    console.log(count);
-    if (argument[4] === 0) {
-      return (0);
+function countMoviesWithWedgeAntilles(apiUrl) {
+  request.get(apiUrl, (error, response, body) => {
+    if (error) {
+      console.error('Error fetching movie list:', error);
+      return;
     }
 
-    if (argument[4] === 10)
-  .catch(error => {
-    console.error('Error:', error);
+    try {
+      const movieList = JSON.parse(body);
+      if (!movieList.results || !Array.isArray(movieList.results)) {
+        console.error('Invalid movie list format');
+        return;
+      }
+
+      movieList.results.forEach(movie => {
+        fetchFilmData(movie.url);
+      });
+
+      setTimeout(() => {
+        console.log(`Number of movies where "Wedge Antilles" is present: ${count}`);
+      }, 1000);
+    } catch (parseError) {
+      console.error('Error parsing movie list:', parseError);
+    }
   });
+}
+
+countMoviesWithWedgeAntilles(apiUrl);
