@@ -15,7 +15,7 @@ request.get(argument, (error, response, body) => {
 });
 console.log(movieData)
 while (i < 7) {
-    individual = argument + i;
+    individual = argument + '/'i;
     console.log(individual)
     request.get(individual, (error, response, body) => {
     if (error) {
