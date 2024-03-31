@@ -4,12 +4,13 @@ const request = require('request');
 
 const argument = process.argv[2];
 let i = 0;
+const movieData;
 request.get(argument, (error, response, body) => {
     if (error) {
       console.error('Error:', error);
     }
     else {
-        const movieData = JSON.parse(body);
+        movieData = JSON.parse(body);
     }
 });
 
