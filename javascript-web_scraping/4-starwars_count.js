@@ -13,7 +13,7 @@ request.get(argument, (error, response, body) => {
         movieData = JSON.parse(body);
     }
 });
-console.log(movieData.count)
+console.log(movieData)
 while (i < 7) {
     individual = argument + i;
     console.log(individual)
