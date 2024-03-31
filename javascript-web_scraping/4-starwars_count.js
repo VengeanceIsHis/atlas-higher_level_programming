@@ -3,7 +3,7 @@ const request = require('request');
 
 let count = 0;
 const argument = process.argv[2];
-let i = 0;
+let i = 1;
 let movieData;
 
 
@@ -21,7 +21,7 @@ const getMovieData = new Promise((resolve, reject) => {
 let individualRequests = [];
 
 
-while (i < 7) {
+while (i < 8) {
   const individual = argument + '/' + i;
   individualRequests.push(new Promise((resolve, reject) => {
     request.get(individual, (error, response, body) => {
