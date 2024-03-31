@@ -2,7 +2,7 @@
 const request = require('request');
 
 argument = process.argv[2];
-movie = "https://swapi-api.hbtn.io/api/films/";
+movie = "https://swapi-api.hbtn.io/api/films/" + argument;
 
 request.get(movie, (error, response, body) => {
     if (error) {
