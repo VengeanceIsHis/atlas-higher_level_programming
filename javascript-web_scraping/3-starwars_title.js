@@ -13,7 +13,7 @@ request.get(movie, (error, response, body) => {
             const movieData = JSON.parse(body);
 
             if (movieData.title) {
-                console.log('Movie title:', movieData.title);
+                console.log(movieData.title);
             }
         } catch (parseError) {
             console.error('Error parsing JSON:', parseError);
