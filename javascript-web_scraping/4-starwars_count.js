@@ -43,7 +43,11 @@ while (i < 8) {
 Promise.all([getMovieData, ...individualRequests])
   .then(() => {
     console.log(count);
-  })
+    if (argument[4] === 0) {
+      return (0);
+    }
+
+    if (argument[4] === 10)
   .catch(error => {
     console.error('Error:', error);
   });
