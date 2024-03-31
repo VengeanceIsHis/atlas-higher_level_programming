@@ -14,7 +14,6 @@ request.get(argument, (error, response, body) => {
         movieData = JSON.parse(body);
     }
 });
-console.log(movieData)
 while (i < 7) {
     individual = argument + '/' + i;
     console.log(individual)
@@ -26,8 +25,7 @@ while (i < 7) {
         const indi_movie = JSON.parse(body);
         if (indi_movie.characters && Array.isArray(indi_movie.characters) && indi_movie.characters.includes("https://swapi-api.hbtn.io/api/people/18/"))
         {
-            console.log("This works")
-            count++;
+            count + 1;
         }
     }
   });
