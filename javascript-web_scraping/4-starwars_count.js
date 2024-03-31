@@ -22,7 +22,7 @@ while (i < 7) {
       console.error('Error:', error);
     }
     else {
-        const indi_movie = json.parse(body);
+        const indi_movie = JSON.parse(body);
         console.log(indi_movie.characters);
     }
   });
