@@ -8,7 +8,7 @@ let movieData;
 
 if (process.argv[2] === "local" && process.argv[3] === "server")
 {
-  console.log(process.argv[4]);
+  console.log(process.argv[5]);
 }
 
 
