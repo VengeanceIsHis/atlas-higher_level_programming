@@ -4,18 +4,26 @@ const request = require('request');
 
 const argument = process.argv[2];
 let i = 0;
-
 request.get(argument, (error, response, body) => {
     if (error) {
       console.error('Error:', error);
     }
     else {
         const movieData = JSON.parse(body);
-        while (movieData.films[i])
-        {
-            if (movieData.films.characters)
-                console.log(movieData.films.characters)
-            i++;
-        }
+    }
+});
+
+while (i < movieData.count) {
+    individual = argument + i;
+    console.log(individual)
+    request.get(individual, (error, response, body) => {
+    if (error) {
+      console.error('Error:', error);
+    }
+    else {
+        const indi_movie = json.parse(body);
+        console.log(indi_movie.characters);
     }
   });
+  i++;
+}
