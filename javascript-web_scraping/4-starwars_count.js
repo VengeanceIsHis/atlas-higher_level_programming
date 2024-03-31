@@ -3,7 +3,7 @@ const request = require('request');
 
 
 const argument = process.argv[2];
-
+let i = 0;
 
 request.get(argument, (error, response, body) => {
     if (error) {
