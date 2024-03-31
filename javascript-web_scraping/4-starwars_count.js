@@ -1,53 +1,49 @@
+#!/usr/bin/nodejs
 const request = require('request');
 
-const apiUrl = process.argv[2];
-const characterUrl = "https://swapi-api.hbtn.io/api/people/18/";
-
 let count = 0;
+const argument = process.argv[2];
+let i = 1;
+let movieData;
 
-function fetchFilmData(url) {
-  request.get(url, (error, response, body) => {
+
+const getMovieData = new Promise((resolve, reject) => {
+  request.get(argument, (error, response, body) => {
     if (error) {
-      console.error('Error fetching film data:', error);
-      return;
-    }
-
-    try {
-      const filmData = JSON.parse(body);
-      if (filmData.characters && filmData.characters.includes(characterUrl)) {
-        count++;
-      }
-    } catch (parseError) {
-      console.error('Error parsing film data:', parseError);
+      reject(error);
+    } else {
+      resolve(JSON.parse(body));
     }
   });
-}
+});
 
-function countMoviesWithWedgeAntilles(apiUrl) {
-  request.get(apiUrl, (error, response, body) => {
-    if (error) {
-      console.error('Error fetching movie list:', error);
-      return;
-    }
 
-    try {
-      const movieList = JSON.parse(body);
-      if (!movieList.results || !Array.isArray(movieList.results)) {
-        console.error('Invalid movie list format');
-        return;
+let individualRequests = [];
+
+
+while (i < 8) {
+  const individual = argument + '/' + i;
+  individualRequests.push(new Promise((resolve, reject) => {
+    request.get(individual, (error, response, body) => {
+      if (error) {
+        reject(error);
+      } else {
+        const indi_movie = JSON.parse(body);
+        if (indi_movie.characters && Array.isArray(indi_movie.characters) && indi_movie.characters.includes("https://swapi-api.hbtn.io/api/people/18/")) {
+          count++;
+        }
+        resolve();
       }
-
-      movieList.results.forEach(movie => {
-        fetchFilmData(movie.url);
-      });
-
-      setTimeout(() => {
-        console.log(`Number of movies where "Wedge Antilles" is present: ${count}`);
-      }, 1000);
-    } catch (parseError) {
-      console.error('Error parsing movie list:', parseError);
-    }
-  });
+    });
+  }));
+  i++;
 }
 
-countMoviesWithWedgeAntilles(apiUrl);
+
+Promise.all([getMovieData, ...individualRequests])
+  .then(() => {
+    console.log(count);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  }), 0;
