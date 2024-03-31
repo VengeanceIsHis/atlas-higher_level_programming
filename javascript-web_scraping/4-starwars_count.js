@@ -6,7 +6,6 @@ const argument = process.argv[2];
 let i = 1;
 let movieData;
 
-
 const getMovieData = new Promise((resolve, reject) => {
   request.get(argument, (error, response, body) => {
     if (error) {
@@ -17,9 +16,7 @@ const getMovieData = new Promise((resolve, reject) => {
   });
 });
 
-
 let individualRequests = [];
-
 
 while (i < 8) {
   const individual = argument + '/' + i;
@@ -28,6 +25,7 @@ while (i < 8) {
       if (error) {
         reject(error);
       } else {
+        console.log("Response for " + individual + ":", body); // Log the response body
         const indi_movie = JSON.parse(body);
         if (indi_movie.characters && Array.isArray(indi_movie.characters) && indi_movie.characters.includes("https://swapi-api.hbtn.io/api/people/18/")) {
           count++;
@@ -38,7 +36,6 @@ while (i < 8) {
   }));
   i++;
 }
-
 
 Promise.all([getMovieData, ...individualRequests])
   .then(() => {
