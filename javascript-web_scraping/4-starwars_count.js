@@ -2,6 +2,7 @@
 const request = require('request');
 
 
+let count = 0;
 const argument = process.argv[2];
 let i = 0;
 let movieData;
@@ -23,8 +24,12 @@ while (i < 7) {
     }
     else {
         const indi_movie = JSON.parse(body);
-        console.log(indi_movie.characters);
+        if (indi_movie.includes("https://swapi-api.hbtn.io/api/people/18/"))
+        {
+            count++;
+        }
     }
   });
   i++;
 }
+console.log(count);
