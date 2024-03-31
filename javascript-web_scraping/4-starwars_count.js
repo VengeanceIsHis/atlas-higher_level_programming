@@ -26,6 +26,7 @@ while (i < 7) {
         const indi_movie = JSON.parse(body);
         if (indi_movie.includes("https://swapi-api.hbtn.io/api/people/18/"))
         {
+            console.log("This works")
             count++;
         }
     }
