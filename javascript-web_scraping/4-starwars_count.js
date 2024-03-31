@@ -46,4 +46,4 @@ Promise.all([getMovieData, ...individualRequests])
   })
   .catch(error => {
     console.error('Error:', error);
-  }), 0;
+  });
