@@ -1,1 +1,0 @@
-New README for learning javascript
