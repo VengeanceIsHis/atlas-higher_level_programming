@@ -1,12 +1,4 @@
 #!/usr/bin/nodejs
-if (process.argv[2]) {
-  const one = process.argv[2];
-} else {
-  const one = 'undefined';
-}
-if (process.argv[3]) {
-  const two = process.argv[3];
-} else {
-  const two = 'undefined';
-}
+let one = process.argv[2] || 'undefined';
+let two = process.argv[3] || 'undefined';
 console.log(one, 'is', two);
