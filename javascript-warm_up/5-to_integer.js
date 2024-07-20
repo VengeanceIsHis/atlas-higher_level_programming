@@ -1,8 +1,5 @@
 #!/usr/bin/nodejs
-if (process.argv[2]) {
-
-}
-const intvalue = parseInt(process.argv[2], 10);
+let intvalue = parseInt(process.argv[2], 10);
 if (isNaN(intvalue)) {
   console.log('Not a number');
 } else {
