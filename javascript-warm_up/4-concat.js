@@ -1,4 +1,6 @@
 #!/usr/bin/nodejs
+let one = ""
+let two = ""
 if (process.argv[2]) {
   const one = process.argv[2];
 } else {
