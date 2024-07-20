@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/nodejs
 console.log("C is fun")
 console.log("Python is cool")
-console.log("")
+console.log("Javasc")
