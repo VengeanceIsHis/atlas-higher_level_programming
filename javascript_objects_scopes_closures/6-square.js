@@ -1,10 +1,11 @@
 #!/usr/bin/nodejs
 const Square = require('./5-square');
-class Square {
+class Square extends Square {
     constructor(size) {
         super(size, size);
     }
     charPrint(c="X") {
+
         let output = "";
         for (let j = 0; j < size; j++)
         {
