@@ -7,12 +7,12 @@ class Rectangle {
         }
     }
     print() {
+        let output = "";
         for (let i = 0; i < this.height; i++)
         {
-           let output = ""
             for (let j = 0; j < this.width; j++)
             {
-                output += "X"
+                output += "X";
             }
         }
         console.log(output);
