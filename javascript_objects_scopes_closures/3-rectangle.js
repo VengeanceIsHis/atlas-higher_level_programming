@@ -14,8 +14,8 @@ class Rectangle {
             {
                 output += "X";
             }
+            console.log(output);
         }
-        console.log(output);
     }
 }
 module.exports = Rectangle;
