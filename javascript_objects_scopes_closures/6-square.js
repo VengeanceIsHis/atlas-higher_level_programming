@@ -4,7 +4,7 @@ class Square extends BaseSquare {
     constructor(size) {
         super(size, size);
     }
-    charPrint(c="X") {
+    charPrint(c = "X") {
 
         let output = "";
         for (let j = 0; j < this.size; j++)
