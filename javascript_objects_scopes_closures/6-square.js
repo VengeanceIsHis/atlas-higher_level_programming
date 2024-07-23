@@ -7,11 +7,11 @@ class Square extends BaseSquare {
     charPrint(c="X") {
 
         let output = "";
-        for (let j = 0; j < this.height; j++)
+        for (let j = 0; j < this.size; j++)
         {
             output += c;
         }
-        for (let i = 0; i < this.height; i++)
+        for (let i = 0; i < this.size; i++)
         {
             console.log(output);
         }
