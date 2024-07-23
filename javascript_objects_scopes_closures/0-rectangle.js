@@ -2,3 +2,6 @@
 class Rectangle {
     pass;
 }
+module.exports; {
+    Rectangle;
+}
