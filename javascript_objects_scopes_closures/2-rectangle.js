@@ -1,16 +1,12 @@
 #!/usr/bin/nodejs
 class Rectangle {
     constructor(w, h) {
-        if (w <= 0 || isNaN(w)) {
-            this.width = "";
+        if (w <= 0 || isNaN(w) || h <= 0) {
+            this.height = "undefined"
+            this.width = "undefined";
         }
         else {
             this.width = w;
-        }
-        if (h <= 0 || isNaN(h)) {
-            this.height = "";
-        }
-        else {
             this.height = h;
         }
 }
