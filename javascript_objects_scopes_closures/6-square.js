@@ -1,6 +1,6 @@
 #!/usr/bin/nodejs
-const Square = require('./5-square');
-class Square extends Square {
+const BaseSquare = require('./5-square');
+class Square extends BaseSquare {
     constructor(size) {
         super(size, size);
     }
