@@ -14,7 +14,7 @@ request.get(url, (err, response, body) => {
 
     data.results.forEach(film => {
         const hasWedgeAntilles = film.characters.some(characterUrl => {
-            return characterUrl.endswith(`/${wedgeAntillesId}/`);
+            return characterUrl.endsWith(`/${wedgeAntillesId}/`);
         });
         if (hasWedgeAntilles) {
             count++;
