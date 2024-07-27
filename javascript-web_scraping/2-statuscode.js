@@ -11,5 +11,5 @@ request.get(url, (err, response) => {
         return;
     }
 
-    console.log(`${response.statusCode}`);
+    console.log(`code: ${response.statusCode}`);
 });
