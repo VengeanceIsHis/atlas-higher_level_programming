@@ -12,7 +12,7 @@ request.get(url, (err, response, body) => {
     const data = JSON.parse(body);
     let count = 0;
 
-    data.result.forEach(film => {
+    data.results.forEach(film => {
         const hasWedgeAntilles = film.characters.some(characterUrl => {
             return characterUrl.endswith(`/${wedgeAntillesId}/`);
         });
