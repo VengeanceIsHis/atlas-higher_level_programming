@@ -14,8 +14,6 @@ request.get(url, (err, response, body) => {
     fs.writeFile(file_name, body, (err) => {
         if (err) {
             console.error('Error writing to file:', err.message);
-        } else {
-            console.log(`Content saved to ${file_name}`);
         }
     });
 });
