@@ -9,8 +9,7 @@ request.get(url, (err, response, body) => {
       console.error(err.message);
       return;
     }
-    const data = JSON.parse(body);
 
-    fs.writeFile(file_name, data)
+    fs.writeFile(file_name, body)
   });
   
