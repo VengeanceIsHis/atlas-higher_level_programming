@@ -5,12 +5,11 @@ const url = process.argv[2];
 const file_name = process.argv[3];
 
 request.get(url, (err, response, body) => {
-    if (err) {
-      console.error(err.message);
-      return;
-    }
-    const data = JSON.parse(body);
+  if (err) {
+    console.error(err.message);
+    return;
+  }
+  const data = JSON.parse(body);
 
-    fs.writeFile(file_name, data)
-  });
-  
+  fs.writeFile(file_name, data);
+});
