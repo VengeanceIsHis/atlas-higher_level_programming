@@ -9,12 +9,10 @@ request.get(url, (err, response, body) => {
     }
     let result = {};
     const data = JSON.parse(body);
-    let i = 0;
     data.forEach(task => {
         const { userId, completed } = task;
 
         if (!result[userId]) {
-            result[userId] = 0;
         }
             if (completed) {
                 result[userId] = (result[userId] || 0) + 1;
