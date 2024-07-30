@@ -2,7 +2,7 @@
 const request = require('request');
 const fs = require('fs');
 const url = process.argv[2];
-const file_name = process.argv[3];
+const filename = process.argv[3];
 
 request.get(url, (err, response, body) => {
   if (err) {
@@ -10,10 +10,19 @@ request.get(url, (err, response, body) => {
     return;
   }
 
+<<<<<<< HEAD
   // Write the body to the file
   fs.writeFile(file_name, body, (err) => {
     if (err) {
       console.error('Error writing to file:', err.message);
     }
   });
+=======
+    // Write the body to the file
+    fs.writeFile(filename, body, (err) => {
+        if (err) {
+            console.error('Error writing to file:', err.message);
+        }
+    });
+>>>>>>> refs/remotes/origin/master
 });
