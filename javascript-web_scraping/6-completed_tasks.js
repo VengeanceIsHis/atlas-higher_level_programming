@@ -11,14 +11,14 @@ request.get(url, (err, response, body) => {
     const data = JSON.parse(body);
     let i = 0;
     data.forEach(task => {
-        const { userId, id } = task;
+        const { userId, completed } = task;
 
         if (!result[userId]) {
             result[userId] = 0;
         }
 
         else {
-            if (task.completed) {
+            if (completed) {
                 result[userId]++;
             }
         }
