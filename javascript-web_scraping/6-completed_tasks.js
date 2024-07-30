@@ -7,7 +7,21 @@ request.get(url, (err, response, body) => {
       console.error(err.message);
       return;
     }
+    let result = {};
     const data = JSON.parse(body);
-    console.log(data);
-  });
-  
+    let i = 0;
+    data.forEach(task => {
+        const { userId, id } = task;
+
+        if (!result[userId]) {
+            result[userId] = 0;
+        }
+
+        else {
+            if (task.completed) {
+                result[userId]++;
+            }
+        }
+    });
+    console.log(result);
+});
