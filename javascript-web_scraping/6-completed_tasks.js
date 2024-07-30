@@ -18,7 +18,7 @@ request.get(url, (err, response, body) => {
         }
 
         else {
-            if (completed) {
+            if (task.completed) {
                 console.log("COMPLETED!!!");
                 result[userId] = (result[userId] || 0) + 1;
             }
