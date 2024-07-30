@@ -10,10 +10,10 @@ request.get(url, (err, response, body) => {
     return;
   }
 
-    // Write the body to the file
-    fs.writeFile(filename, body, (err) => {
-        if (err) {
-            console.error('Error writing to file:', err.message);
-        }
-    });
+  // Write the body to the file
+  fs.writeFile(filename, body, (err) => {
+    if (err) {
+      console.error('Error writing to file:', err.message);
+    }
+  });
 });
