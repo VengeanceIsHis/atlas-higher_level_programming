@@ -32,11 +32,11 @@ request.get(url, (err, response, body) => {
     const data = JSON.parse(body);
     data.forEach(task => {
         const { userId, completed } = task;
-
-        if (!result[userId]) {
-        }
-            if (completed) {
-                result[userId] = (result[userId] || 0) + 1;
+        if (completed) {
+            if (!result[userId]) {
+                result[userId] = 0;
+            }
+            result[userId]++;
         }
     });
     console.log(result);
