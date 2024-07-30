@@ -19,9 +19,9 @@ request.get(url, (err, response, body) => {
 
         else {
             if (completed) {
-                result[userId]++;
+                console.log("COMPLETED!!!");
+                result[userId] = (result[userId] || 0) + 1;
             }
         }
     });
-    console.log(result);
 });
