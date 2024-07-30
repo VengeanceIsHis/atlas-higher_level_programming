@@ -15,14 +15,12 @@ request.get(url, (err, response, body) => {
 
         if (!result[userId]) {
             result[userId] = 0;
+            console.log("I am here")
         }
-
-        else {
             console.log(result);
             if (completed) {
                 console.log("COMPLETED!!!");
                 result[userId] = (result[userId] || 0) + 1;
-            }
         }
     });
 });
