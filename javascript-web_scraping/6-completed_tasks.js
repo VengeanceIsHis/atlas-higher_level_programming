@@ -22,5 +22,6 @@ request.get(url, (err, response, body) => {
                 console.log("COMPLETED!!!");
                 result[userId] = (result[userId] || 0) + 1;
         }
+        console.log(result);
     });
 });
